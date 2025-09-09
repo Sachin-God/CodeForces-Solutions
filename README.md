@@ -18,13 +18,13 @@ A comprehensive collection of my competitive programming solutions from Codeforc
 
 ```
 CodeForces-Solutions/
-├── Contest-Round-XXXX (Division 1/2/3/4) /
+├── Codeforces-Round-XXXX (Division 1/2/3/4) /
 │   ├── A-Problem-Name.cpp
 │   ├── B-Problem-Name.cpp
 │   └── ...
 │   CF-799/
 │       └── ...
-├── Contest-Round-YYYY (Division 1/2/3/4)
+├── Codeforces-Round-YYYY (Division 1/2/3/4)
 │   └── ...
 └── README.md
 ```
