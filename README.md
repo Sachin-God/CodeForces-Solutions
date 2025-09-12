@@ -22,8 +22,7 @@ CodeForces-Solutions/
 │   ├── A-Problem-Name.cpp
 │   ├── B-Problem-Name.cpp
 │   └── ...
-│   CF-799/
-│       └── ...
+│
 ├── Codeforces-Round-YYYY (Division 1/2/3/4)
 │   └── ...
 └── README.md
