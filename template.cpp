@@ -1,12 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 #define all(x) begin(x), end(x)
+#define pb push_back
+#define FOR(s, n) for(int i = s; i < n; i++)
+#define ROF(n, s) for(int i = n; i >= s; --i)
+
 typedef long long ll;
 typedef vector<int> vi;
 typedef vector<vector<int>> vvi;
 typedef vector<long long> vll;
 typedef vector<vector<long long>> vvll;
-#define f(s, n) for(int i = s; i < n; i++)
 
 template <typename T>
 void print_vector(const vector<T>& vec) {
@@ -29,8 +33,6 @@ int main() {
     int t; cin >> t;
     while (t--) {
         int n; cin >> n;
-        vi a(n);
-        f(0, n) cin >> a[i];
-        
+               
     }
 }
