@@ -11,6 +11,10 @@ typedef vector<int> vi;
 typedef vector<vector<int>> vvi;
 typedef vector<long long> vll;
 typedef vector<vector<long long>> vvll;
+typedef vector<string> vs;
+
+template <typename T> using maxHeap = priority_queue<T>;
+template <typename T> using minHeap = priority_queue<T, vector<T>, greater<T>>;
 
 template <typename T>
 void print_vector(const vector<T>& vec) {
