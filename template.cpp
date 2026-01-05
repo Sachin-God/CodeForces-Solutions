@@ -34,6 +34,8 @@ typedef queue<string> qs;
 
 template <typename T> using maxHeap = priority_queue<T>;
 template <typename T> using minHeap = priority_queue<T, vector<T>, greater<T>>;
+template <typename S, typename T> using umap = unordered_map<S, T>;
+template <typename T> using uset = unordered_set<T>;
 
 template <typename T>
 void print_vector(const vector<T>& vec) {
