@@ -1,35 +1,19 @@
+// 1.5 hours + editorial -- first attemp still not solved
+// attempt 2 -- 50 min + editorial
 #include <bits/stdc++.h>
 using namespace std;
 
 #define all(x) begin(x), end(x)
 #define pb push_back
-#define FOR(i, s, n) for(int i = s; i < n; i++) // including i is better bcz nested loop will overwrite upper one
-#define ROF(i, n, s) for(int i = n; i >= s; --i)
+#define FOR(i, s, n) for(int i = s; i < n; i++)
+#define ROF(i, n, s) for(int i = n-1; i >= s; --i)
 
 typedef long long ll;
-typedef pair<int,int> pii;
-typedef pair<ll, ll> pll;
-typedef pair<string, string> pss;
-
 typedef vector<int> vi;
 typedef vector<vector<int>> vvi;
 typedef vector<long long> vll;
 typedef vector<vector<long long>> vvll;
 typedef vector<string> vs;
-typedef vector<pii> vpi;
-typedef vector<pll> vpll;
-typedef vector<bool> vb;
-typedef vector<vector<bool>> vvb;
-
-typedef deque<int> dqi;
-typedef deque<ll> dqll;
-typedef deque<pii> dqii;
-typedef deque<string> dqs;
-
-typedef queue<int> qi;
-typedef queue<ll> qll;
-typedef queue<pii> qii;
-typedef queue<string> qs;
 
 template <typename T> using maxHeap = priority_queue<T>;
 template <typename T> using minHeap = priority_queue<T, vector<T>, greater<T>>;
@@ -54,7 +38,12 @@ int main() {
     ios ::sync_with_stdio(false); cin.tie(nullptr);
     int t; cin >> t;
     while (t--) {
-        int n; cin >> n;
-               
+        int n, l, r; cin >> n >> l >> r;
+        vi b(n), a(n);
+        FOR(i, 0, n) b[i] = i+1;
+        b[r-1] = l-1; 
+        a[0] = 1;
+        FOR(i, 1, n) a[i] = b[i] ^ b[i-1];
+        print_vector(a);
     }
 }
