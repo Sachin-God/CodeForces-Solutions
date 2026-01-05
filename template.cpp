@@ -5,6 +5,7 @@ using namespace std;
 #define pb push_back
 #define FOR(i, s, n) for(int i = s; i < n; i++) // including i is better bcz nested loop will overwrite upper one
 #define ROF(i, n, s) for(int i = n; i >= s; --i)
+#define FIND(set, target) (set.find(target) != set.end())
 
 typedef long long ll;
 typedef pair<int,int> pii;
