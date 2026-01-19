@@ -1,3 +1,6 @@
+// day 1 : tried for 1 hr -- then read the editorial
+// after some days solved it without Editorial
+// 33 mins + 2 WA
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -54,7 +57,24 @@ void print_grid(const vector<vector<T>>& grid) {
 }
 
 void Solve() {
-    int n; cin >> n;
+    int n, k; cin >> n >> k;
+    vi a(n);
+    FOR(i, 0, n) cin >> a[i];
+    vi g(n+1, 0), p (n+1, 0);
+    FOR(i, 0, n) {
+        int x = a[i];
+        g[x] += 1;
+        if (x % 2 == 0) g[x/2]++;
+        if (x % 3 == 0) g[x/3]++;
+        p[x/4]++;
+    }
+
+    int ans = 1;
+    ROF(i, n, 1) {
+        if (i < n) p[i] += p[i+1];
+        if (p[i] + g[i] >= n-k) {ans = i; break;}
+    }
+    cout << ans << '\n';
 }
 
 int main() {
