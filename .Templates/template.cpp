@@ -7,6 +7,7 @@ using namespace std;
 #define ROF(i, n, s) for(int i = n; i >= s; --i)
 #define FIND(set, target) (set.find(target) != set.end())
 #define ent '\n'
+#define LSOne(S) ((S) & -(S))
 
 typedef long long ll;
 typedef pair<int,int> pii;
@@ -53,6 +54,9 @@ void print_grid(const vector<vector<T>>& grid) {
         cout << '\n';
     }
 }
+
+template <typename T> 
+void print(T x) {cout << x << ent;}
 
 void Solve() {
     int n; cin >> n;
