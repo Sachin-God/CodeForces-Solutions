@@ -111,12 +111,13 @@ void Solve() {
         cin >> b[i];
         if (i > 0) b[i] += b[i-1];
     }
-    sort(all(a));
+    sort(all(a), greater<>());
     ll score = 0;
+    int k = 0;
     FOR(i, 0, n) {
-        if (a[i] == a[i-1]) continue;
-        int idx = upper_bound(all(b), n-i) - b.begin();
-        score = max(score, 1LL*idx*a[i]);
+        if (k == n) break;
+        if (i+1 >= b[k]) k++;
+        score = max(score, 1LL*a[i]*k); 
     }
     cout << score << ent;
 }
